@@ -8,13 +8,21 @@ body {
 	font-family: 'Roboto', sans-serif;
 	line-height: 1.6;
     color: #929090;
-    margin-left: 2em;
-    margin-right: 2em;
+    margin-top: 3em;
+    margin-left: 10px;
+    margin-right: 10px;
+    
 }
 
 p {
 	font-size: .95em;
 	margin-bottom: 1.5em;
+}
+
+h1 {
+    font-weight: bolder;
+    color: #525252;
+    font-family: 'Ubuntu', serif;
 }
 
 h2 {
@@ -40,18 +48,25 @@ h3 {
     text-align: center;
 }
 
-.title {
-    font-weight: bolder;
-    color: #525252;
-}
 
 .portfolio-img {
     width: 200px;
 }
 
 .title-portfolio {
-    margin-bottom: 4em;
+    margin-top: 4em;
+    margin-bottom: 2em;
 }
+
+
+.bio-text {
+    width: 80%;
+    margin: auto;
+}
+
+/* ======LAYOUT CONTAINERS====== */
+
+
 
 .navigation {
     line-height: 3.5em;
@@ -59,17 +74,21 @@ h3 {
     font-weight: bold;
     text-transform: uppercase;
     color: #525252;
+    font-family: 'Ubuntu', serif;
 }
-
-
-/* ======LAYOUT CONTAINERS====== */
 
 .container {
     text-align: center;
 }
 
 .container-img {
-    width: 300px;
+    width: 250px;
+}
+
+.container-text {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .contact {
@@ -83,6 +102,8 @@ h3 {
     margin-bottom: 1.5em;
     font-weight: bold;
     color: #525252;
+    font-family: 'Ubuntu', serif;
+    font-size: .9em;
     
   
 }
@@ -96,24 +117,176 @@ h3 {
     
 }
 
+.alt-footer {
+    display: none;
+}
+
 
 /* ======Pseudo-classes====== */
 
 a:link {
-    color: rgb(189, 145, 64);
+    color: #7c7c7c;
+    text-decoration: none;
   }
 
   /* visited link */
 a:visited {
-    color: rgb(100, 204, 169);
+    color: #3d3d3d;
   }
 
-/* ======CLEARFIX====== */
+/* ======Tablet View====== */
 
-.clearfix::after {
-    content: "";
-    display: table;
-    clear: both;
+@media (min-width: 768px) {
+    
+    body {
+        margin-left: 2em;
+        margin-right: 2em;
+    }
+
+    .navigation li {
+        display: inline-block;
+        padding: 1em;
+    }
+
+    .portfolio-img {
+        float: right;
+        width: 300px;
+    }
+
+    .bio-text {
+        float: left;
+        font-size: 1.3em;
+        width: 50%;
+    }
+
+    .container {
+        float: left;
+        width: 50%;
+        height: 350px;
+        margin-top:.5em;
+        margin-bottom: 2em;
+       
+    }
+
+    .container-img {
+        width: 300px;
+        
+    }
+
+
+    .contact {
+        display: table;
+        width: 60%;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 1.3em;
+        padding-bottom: 2em;   
+    }
+    
+    .main-footer {
+        display: none;
+    }
+
+    .alt-footer {
+        display: inherit;
+        border-top: 1px solid #e7e7e7;
+        padding-top: 1.5em;
+        padding-bottom: 1.5em;
+        margin-bottom: 1.5em;
+        font-weight: bold;
+        font-family: 'Ubuntu', serif;
+        color: #525252;
+        
+
+    }
+
+    .alt-footer-nav {
+        text-align: right;
+        
+    }
+
+    .alt-footer-nav li {
+        display: inline;
+        width: 40%;
+        padding: 1em;
+        
+
+    }
+
+    .main-footer-name {
+        float: left;
+        width: 60%;
+        line-height: 0;
+        
+    }
+
+    /* ======CLEARFIX====== */
+
+    .clearfix::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+    
 }
 
+@media (min-width: 1024px) {
 
+    body {
+        margin-left: 4em;
+        margin-right: 4em;
+    }
+
+    .main-header {
+        margin-bottom: 2em;
+    }
+
+    .title {
+        float: left;
+    }
+
+    .navigation li {
+        float: right;
+        padding: 1em;
+    }
+
+    .portfolio-img {
+        float: right;
+        width: 300px;
+        margin-right: 3.5em;
+       
+    }
+
+    .bio-text {
+        float: left;
+        font-size: 1.3em;
+        width: 50%;
+    }
+
+
+    .container {
+        float: left;
+        width: 33.3%;
+        height: 350px;
+        margin-top:.5em;
+        margin-bottom: 2em;
+     
+    }
+
+    .container-img {
+        width: 300px;
+    }
+
+
+
+    /* ======CLEARFIX====== */
+
+    .clearfix::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+    
+
+}
