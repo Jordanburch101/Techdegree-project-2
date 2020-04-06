@@ -44,7 +44,9 @@ h3 {
 .bio,
 .contact,
 .main-footer,
-.title-portfolio {
+.title-portfolio,
+.container,
+.skills {
     text-align: center;
 }
 
@@ -77,9 +79,6 @@ h3 {
     font-family: 'Ubuntu', serif;
 }
 
-.container {
-    text-align: center;
-}
 
 .container-img {
     width: 250px;
@@ -93,6 +92,29 @@ h3 {
 
 .contact {
     margin-top: 6em;
+}
+
+.skills {
+    margin-top: 4em;
+}
+
+
+
+.skills li {
+    border-radius: 6px;
+    display: inline-block;
+    
+    color: white;
+    padding: 5px 10px;
+    margin: 2px;
+}
+
+.skills-orange {
+    background: #ff9900;
+}
+
+.skills-teal {
+    background: #26dbbd;
 }
 
 .main-footer {
@@ -230,6 +252,8 @@ a:visited {
 
     
 }
+
+/* ======Dekstop View====== */
 
 @media (min-width: 1024px) {
 
