@@ -11,10 +11,12 @@ body {
     margin-top: 3em;
     margin-left: 10px;
     margin-right: 10px;
+    max-width: 1200px;
     
 }
 
-p {
+p,
+a {
 	font-size: .95em;
 	margin-bottom: 1.5em;
 }
@@ -27,14 +29,15 @@ h1 {
 
 h2 {
     color: #525252;
-    font-size: 1em;
+    font-size: 1.1em;
     font-family: 'Ubuntu', serif;
+    text-transform: uppercase;
     
 }
 
 h3 {
     color: #525252;
-    font-size: 1.1em;
+    font-size: 1em;
     
 }
 
@@ -53,13 +56,14 @@ h3 {
 
 .portfolio-img {
     width: 200px;
+    padding-bottom: 1em;
+    transition: all .2s;
 }
 
 .title-portfolio {
     margin-top: 4em;
     margin-bottom: 2em;
 }
-
 
 .bio-text {
     width: 80%;
@@ -92,21 +96,33 @@ h3 {
 
 .contact {
     margin-top: 6em;
+    margin-bottom: 1em;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;    
 }
 
 .skills {
     margin-top: 4em;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 
 
 .skills li {
-    border-radius: 6px;
+    border-radius: 8px;
+    box-shadow: 5px 5px 30px 0px rgba(0,0,0,0.20);
     display: inline-block;
-    
     color: white;
     padding: 5px 10px;
     margin: 2px;
+    transition: all .2s;
+}
+
+.skills li:hover {
+    transform: scale(1.2) rotate(10deg);
 }
 
 .skills-orange {
@@ -126,8 +142,6 @@ h3 {
     color: #525252;
     font-family: 'Ubuntu', serif;
     font-size: .9em;
-    
-  
 }
 
 .main-footer-name {
@@ -147,14 +161,25 @@ h3 {
 /* ======Pseudo-classes====== */
 
 a:link {
-    color: #7c7c7c;
+    color: #525252;
     text-decoration: none;
-  }
+}
 
-  /* visited link */
 a:visited {
     color: #3d3d3d;
-  }
+}
+
+a:hover {
+    color: rgb(114, 123, 250);
+}
+
+/* ======CLEARFIX====== */
+
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
 
 /* ======Tablet View====== */
 
@@ -186,15 +211,17 @@ a:visited {
         width: 50%;
         height: 350px;
         margin-top:.5em;
-        margin-bottom: 2em;
-       
+        margin-bottom: 2em; 
     }
 
     .container-img {
-        width: 300px;
-        
+        width: 300px;        
     }
 
+    .skills {
+        width: 50%;
+        margin: auto;
+    }
 
     .contact {
         display: table;
@@ -218,44 +245,32 @@ a:visited {
         font-weight: bold;
         font-family: 'Ubuntu', serif;
         color: #525252;
-        
-
     }
 
     .alt-footer-nav {
-        text-align: right;
-        
+        text-align: right;       
     }
 
     .alt-footer-nav li {
         display: inline;
         width: 40%;
         padding: 1em;
-        
-
     }
 
     .main-footer-name {
         float: left;
         width: 60%;
-        line-height: 0;
-        
+        line-height: 0;       
     }
-
-    /* ======CLEARFIX====== */
-
-    .clearfix::after {
-        content: "";
-        display: table;
-        clear: both;
-    }
-
-    
 }
-
 /* ======Dekstop View====== */
 
 @media (min-width: 1024px) {
+
+    html {
+        max-width: 1250px;
+        margin: auto;
+    }
 
     body {
         margin-left: 4em;
@@ -278,8 +293,7 @@ a:visited {
     .portfolio-img {
         float: right;
         width: 300px;
-        margin-right: 3.5em;
-       
+        margin-right: 3.5em;     
     }
 
     .bio-text {
@@ -295,22 +309,14 @@ a:visited {
         height: 350px;
         margin-top:.5em;
         margin-bottom: 2em;
-     
     }
 
     .container-img {
-        width: 300px;
+        width: 280px;
     }
 
-
-
-    /* ======CLEARFIX====== */
-
-    .clearfix::after {
-        content: "";
-        display: table;
-        clear: both;
+    .skills {
+        width: 50%;
+        margin: auto;
     }
-    
-
 }
