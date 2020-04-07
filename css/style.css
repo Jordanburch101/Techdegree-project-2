@@ -254,13 +254,13 @@ a:hover {
 
     .alt-footer-nav li {
         display: inline;
-        width: 40%;
+        width: 50%;
         padding: 1em;
     }
 
     .main-footer-name {
         float: left;
-        width: 60%;
+        width: 50%;
         line-height: 0;       
     }
 }
