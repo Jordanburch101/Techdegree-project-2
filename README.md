@@ -10,7 +10,7 @@ adjusting to accommodate small, medium, and large screen sizes.
 * [Contact](#contact)
 
 ## General info
-The second project that I build as a template that someone could use as a basic portfolio. 
+The second project that I built as a template that someone could use as a basic portfolio. 
 It features animated buttons, responsive sizing built from the ground up to be mobile-friendly.
 
 ## Screenshots
